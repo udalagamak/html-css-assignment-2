@@ -16,6 +16,9 @@
         <!-- JS file and jQuery -->
         <script src="/js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <!-- jQuery Validation -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
 
     <body>
@@ -223,7 +226,41 @@
           <section class="image-grid">
             <h1>Contact Us</h1>
             <div class="form-container">
+              <form action="#" name="contact" class="form-wrapper">
+                <fieldset>
+                  <legend>Your Name:</legend>
+                  <label for="firstname">First Name</label>
+                  <input type="text" name="firstname" id="firstname" class="input-field" placeholder="John" />
               
+                  <label for="lastname">Last Name</label>
+                  <input type="text" name="lastname" id="lastname" class="input-field" placeholder="Doe" />
+                </fieldset>
+
+                <div class="field-wrap">
+                  <label for="phone">Phone No.</label>
+                  <input type="text" name="phone" id="phone" class="input-field" placeholder="(123) 456 7890" />
+                </div>
+            
+                <div class="field-wrap">
+                  <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="input-field" placeholder="john@doe.com" />
+                </div>
+            
+                <div class="textarea-wrap">
+                  <label for="comment">Your Message Here</label>
+                  <textarea name="comment" id="comment" class="input-field" rows="5" cols="50"></textarea>
+                </div>
+
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="scales" name="scales">
+                  <label for="scales">I consent to having this website store my submitted information so they can respond 
+                  to my enquiry.</label>
+                </div>
+            
+                <button type="submit" class="form-btn">
+                  <span class="txt-btn">Submit</span>
+                </button>
+              </form>
             </div>
           </section>
         </main>
