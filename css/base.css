@@ -16,6 +16,14 @@ body{
   background-color: #fff5f2;
 }
 
+body.menu-opened{
+  overflow-y: hidden;
+}
+
+main{
+  min-height: calc(100vh - 153px);
+}
+
 .image-text-grid, .image-grid{
   margin: 0 98px 113px;
 }
@@ -96,6 +104,13 @@ a{
   top: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .close{
+    right: 4px;
+    z-index: 100;
+  }
+}
+
 header.open .hamburger, .close{
   display: block;
 }
@@ -117,13 +132,19 @@ header.open .sidebar{
   }
 }
 
+@media screen and (min-width: 768px) {
+  #services ul{
+    column-count: 1;
+  }
+}
+
 @media screen and (max-width: 768px) {
   header{
     width: calc(100vw - 60px);
   }
 
   .img-container{
-    height: 350px;
+    height: 34.213vh;
   }
 
   .image-text-grid, .image-grid{
@@ -132,10 +153,6 @@ header.open .sidebar{
 
   #services{
     margin: 60px 28px;
-  }
-
-  #services ul{
-    column-count: 1;
   }
 
   h1{
@@ -179,6 +196,10 @@ header.open .sidebar{
   font-size: 16px;
 }
 
+.nav-item:hover a{
+  font-weight: 700;
+}
+
 .nav-item.mb{
   display: block;
   margin: 18px 20px;
@@ -204,22 +225,43 @@ header.open .sidebar{
   width: 335px;
   height: 100%;
   padding: 8px 25px 25px;
+  background-color: #fff5f2;
+  box-shadow: 0px 1px 10px rgb(0 0 0 / 16%);
   transition: transform 0.4s ease-in-out;
+}
+  
+@media screen and (max-width: 768px) {
+  .sidebar{
+    width: 100%;
+    top: 0;
+  }
 }
 
 footer{
-  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 10px 98px;
-  color: #ffffff;
-  /* border-top: 1px solid #fff; */
+  color: #000000;
+  border-top: 1px solid #000000;
+}
+
+@media screen and (max-width: 768px) {
+  footer{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 30px;
+    text-align: center;
+  }
+
+  .socials{
+    margin-top: 16px;
+  }
 }
 
 footer a {
-  color: #ffffff;
+  color: #000000;
 }
 
 .link.facebook{
@@ -230,6 +272,13 @@ footer a {
   column-count: 2;
   column-gap: 40px;
 }
+
+@media screen and (max-width: 768px) {
+  #services ul{
+    column-count: 1;
+  }
+}
+
 
 #services .left-container{
   margin-top: 30px;
